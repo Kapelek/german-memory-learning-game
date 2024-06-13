@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memorki</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="img" href="img/flag.jpg">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <div id="banner-top">
+        <img src="img/flag.jpg" alt="germany-flag">
+        <h1>NIEMIECKIE MEMORKI</h1>
+        <img src="img/flag.jpg" alt="germany-flag">
+    </div>
+    <div id="container-main">
+        <div id="container-menu" class="display-flex">
+            <div class="container-menu-btn" id="container-menu-cards" onclick="CardsOpen()">
+                <span class="material-symbols-outlined">
+                    view_carousel
+                </span>
+                <h2>FISZKI</h2>
+            </div>
+            <div class="container-menu-btn" id="container-menu-game" onclick="GameOpen()">
+                <span class="material-symbols-outlined">
+                    crossword
+                </span>
+                <h2>GRA</h2>
+            </div>
+        </div>
+        <div id="container-cards">
+            <div class="container-bar">
+                <p class="container-bar-title">FISZKI</p>
+                <span class="material-symbols-outlined close-btn" onclick="MenuOpen()">
+                    close
+                </span>
+            </div>
+        </div>
+        <div id="container-game">
+            <div class="container-bar">
+                <p class="container-bar-title">GRA - MEMORKI</p>
+                <span class="material-symbols-outlined close-btn" onclick="MenuOpen()">
+                    close
+                </span>
+            </div>
+            <div id="game-options">
+                <p class="option-title">Wybierz tematy, z których mają być hasła w grze:</p>
+                <ul id="game-options-categories"></ul>
+                <div id="start-game-btn" onclick="StartGame()">ZACZNIJ GRĘ</div>
+            </div>
+            <div id="game-board">
+                <!-- <div class="game-board-item">
+                    <span class="material-symbols-outlined game-board-item-top display-flex">
+                        question_mark
+                    </span>
+                    <p class="game-board-item-back">die Katze</p>
+                </div> -->
+            </div>
+            <div id="winner-screen">
+                <h1>Memorki ukończone, gratulacje!</h1>
+                <div id="play-again-btn" onclick="PlayAgain()">ZAGRAJ JESZCZE RAZ</div>
+            </div>
+        </div>
+    </div>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
